@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Pages Guide &amp; Contact — Qawaid-o-Insha</title>
+    <meta name="description" content="GitHub Pages static repository checklist, lowercase relative-path folder structure, and study feedback form." />
+    <meta property="og:title" content="GitHub Pages Guide & Contact — Qawaid-o-Insha" />
+    <meta property="og:description" content="Pre-upload GitHub Pages verification checklist and study feedback portal for the static Urdu Qawaid-o-Insha website." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-wordmark">Qawaid-o-Insha Archive</a>
+
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="mobile-menu-btn"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation menu"
+        >
+          Menu
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Compendium</a>
+          <a href="about.html" class="nav-link">Format Guide</a>
+          <a href="index.html#practice-studio" class="nav-link">Practice Studio</a>
+          <a href="contact.html" class="nav-link" aria-current="page">GitHub Guide</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" id="print-sheet-btn" class="btn btn-primary">
+            Print Study Sheet
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="hero-section">
+        <div class="container">
+          <p class="editorial-kicker">Static Hosting Readiness · Zero Build Pipeline</p>
+          <h1 class="hero-title">GitHub Pages Deployment &amp; Study Notes</h1>
+          <p class="hero-lead">
+            Every HTML page, stylesheet, script, and image in this project uses 100% lowercase filenames and relative paths so it runs directly inside any GitHub Pages subdirectory without 404 errors.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container">
+          <div class="guide-grid">
+            <div class="card-panel">
+              <div class="checklist-header">
+                <h2>Pre-Upload Checklist</h2>
+                <span id="checklist-progress" class="tabular-nums checklist-progress">0 of 5 verified</span>
+              </div>
+              <p class="panel-lead">
+                Verify each requirement before committing or uploading directly via the GitHub web interface:
+              </p>
+
+              <ul id="github-deploy-checklist" class="deploy-checklist">
+                <li>
+                  <label>
+                    <input type="checkbox" id="chk-root-index" />
+                    <span><strong>Lowercase Entry Point:</strong> <code>index.html</code>, <code>about.html</code>, and <code>contact.html</code> sit directly in the repository root.</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" id="chk-relative-paths" />
+                    <span><strong>Relative Links Only:</strong> All references use <code>css/style.css</code>, <code>js/script.js</code>, and <code>assets/images/...</code> with zero leading slashes.</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" id="chk-nojekyll" />
+                    <span><strong>NoJekyll Marker Included:</strong> Empty <code>.nojekyll</code> file is uploaded at root to bypass Jekyll processing.</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" id="chk-https-fonts" />
+                    <span><strong>HTTPS External Fonts:</strong> Google Fonts for Playfair Display, Plus Jakarta Sans, and Noto Nastaliq Urdu load strictly over <code>https://</code>.</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" id="chk-pages-branch" />
+                    <span><strong>Pages Source Configured:</strong> In GitHub Repository Settings → Pages, select <em>Deploy from a branch</em> (<code>main</code> / <code>/(root)</code>).</span>
+                  </label>
+                </li>
+              </ul>
+
+              <div class="tree-header">
+                <h3>Repository Folder Tree</h3>
+                <button type="button" id="reset-checklist-btn" class="btn btn-ghost btn-sm">Reset Checklist</button>
+              </div>
+              <pre class="folder-tree" aria-label="Static Repository Folder Tree">your-repo/
+├── .nojekyll
+├── index.html
+├── about.html
+├── contact.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── assets/
+    └── images/
+        ├── hero_urdu_manuscript.jpg
+        └── calligraphy_study_desk.jpg</pre>
+            </div>
+
+            <div class="card-panel">
+              <h2>Submit Study Note or Errata</h2>
+              <p class="panel-lead">
+                Static GitHub Pages sites run without a server database. Use this client-side form to preview feedback formatting or suggest an alternate title for any passage.
+              </p>
+
+              <form id="study-feedback-form" class="form-stack" novalidate>
+                <div class="form-control">
+                  <label for="sender-name">Your Name</label>
+                  <input type="text" id="sender-name" class="form-input" placeholder="e.g., Ayesha Siddiqui" required />
+                </div>
+
+                <div class="form-control">
+                  <label for="feedback-topic">Related Passage or Section</label>
+                  <select id="feedback-topic" class="form-select">
+                    <option value="General Format & Rules">General Format &amp; Video Rules</option>
+                    <option value="Passage 1–5">Practice Passages 1–5</option>
+                    <option value="Passage 6–10">Practice Passages 6–10</option>
+                    <option value="GitHub Pages Setup">GitHub Pages Hosting Setup</option>
+                  </select>
+                </div>
+
+                <div class="form-control">
+                  <label for="feedback-message">Note or Suggested Revision</label>
+                  <textarea id="feedback-message" class="form-textarea" placeholder="Share an alternate عنوان, wording suggestion, or study note..." required></textarea>
+                </div>
+
+                <div>
+                  <button type="submit" class="btn btn-primary">Validate &amp; Preview Note</button>
+                </div>
+
+                <div id="form-status-box" class="form-status" role="status" aria-live="polite" hidden></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>Qawaid-o-Insha Archive · Static GitHub Pages Reference</span>
+        <nav class="footer-links" aria-label="Footer Navigation">
+          <a href="index.html">Compendium</a>
+          <a href="about.html">Format &amp; Video Rules</a>
+          <a href="contact.html">GitHub Pages Guide</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div id="toast-banner" class="toast-banner" role="status" aria-live="polite"></div>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

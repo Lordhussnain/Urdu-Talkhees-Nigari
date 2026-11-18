@@ -1,0 +1,6 @@
+{
+  "name": "Urdu Qawaid-o-Insha Précis Compendium",
+  "description": "A static GitHub Pages study archive presenting all 10 solved Talkhees (Précis) passages from Urdu Qawaid-o-Insha (pp. 76–79) with board exam formatting rules and an interactive practice studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
